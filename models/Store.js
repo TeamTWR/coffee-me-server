@@ -1,6 +1,10 @@
 import { Schema, model } from "mongoose";
 
 const StoreSchema = new Schema({
+  createdAt: {
+    type: Date,
+    required: false,
+  },
   storeId: {
     type: String,
     unique: true,
@@ -40,6 +44,10 @@ const StoreSchema = new Schema({
     required: false,
   },
   rating: {
+    type: Number,
+    required: false,
+  },
+  ratingsCount: {
     type: Number,
     required: false,
   },
